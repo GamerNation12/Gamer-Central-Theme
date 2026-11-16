@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( '_S_VERSION' ) ) {
-    define( '_S_VERSION', '2.3' );
+    define( '_S_VERSION', '2.4' );
 }
 
 function gamer_central_setup() {
@@ -64,21 +64,27 @@ function gamer_central_seo() {
     $sharing_image = get_theme_file_uri( '/assets/logo.png' );
     $fallback_image = get_theme_file_uri( '/screenshot.png' );
 
+    $is_home = is_front_page() && is_home();
+
     $title = $site_name;
-    $desc = $description;
+    $desc = $is_home ? $site_name : $description;
     $type = 'website';
     $url = home_url( '/' );
-    $img = $sharing_image;
+    $img = $fallback_image;
     $img_width = 1200;
     $img_height = 630;
 
-    if ( is_singular() && $post ) {
+    if ( $is_home ) {
+        $desc = esc_html( $description );
+    } elseif ( is_singular() && $post ) {
         $title = get_the_title( $post );
         $desc = get_the_excerpt( $post ) ?: $description;
         $type = 'article';
         $url = get_permalink( $post );
         if ( has_post_thumbnail( $post ) ) {
             $img = get_the_post_thumbnail_url( $post, 'large' );
+        } else {
+            $img = $sharing_image;
         }
         $published = get_the_time( 'c', $post );
         $modified = get_the_modified_time( 'c', $post );
@@ -99,16 +105,20 @@ function gamer_central_seo() {
     <meta property="og:description" content="<?php echo esc_attr( $desc ); ?>">
     <meta property="og:type" content="<?php echo esc_attr( $type ); ?>">
     <meta property="og:url" content="<?php echo esc_url( $url ); ?>">
+    <?php if ( ! $is_home ) : ?>
     <meta property="og:image" content="<?php echo esc_url( $img ); ?>">
     <meta property="og:image:width" content="<?php echo esc_attr( $img_width ); ?>">
     <meta property="og:image:height" content="<?php echo esc_attr( $img_height ); ?>">
     <meta property="og:image:alt" content="<?php echo esc_attr( $title ); ?>">
-    <meta property="og:site_name" content="<?php echo esc_attr( $site_name ); ?>">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="<?php echo esc_attr( $title ); ?>">
-    <meta name="twitter:description" content="<?php echo esc_attr( $desc ); ?>">
     <meta name="twitter:image" content="<?php echo esc_url( $img ); ?>">
     <meta name="twitter:image:alt" content="<?php echo esc_attr( $title ); ?>">
+    <?php else : ?>
+    <meta name="twitter:card" content="summary">
+    <?php endif; ?>
+    <meta property="og:site_name" content="<?php echo esc_attr( $site_name ); ?>">
+    <meta name="twitter:title" content="<?php echo esc_attr( $title ); ?>">
+    <meta name="twitter:description" content="<?php echo esc_attr( $desc ); ?>">
     <link rel="canonical" href="<?php echo esc_url( $url ); ?>">
     <?php if ( ! empty( $author ) ) : ?>
     <meta property="article:author" content="<?php echo esc_attr( $author ); ?>">
