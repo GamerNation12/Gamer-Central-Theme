@@ -240,6 +240,101 @@ body.light .site-footer, html.light .site-footer {
     color: #64748b !important;
 }
 
+/* Fully Rounded UI Elements - Widgets, Search Inputs, Buttons */
+.widget, .hentry, .post-card, article, .site-header {
+    overflow: hidden;
+}
+
+.widget, .hentry, .post-card, article {
+    border-radius: var(--gamer-radius);
+}
+
+/* Search boxes & form inputs */
+.search-form,
+.wp-block-search,
+input[type="search"],
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+input[type="color"],
+textarea,
+select,
+.wp-block-search__input {
+    border-radius: var(--gamer-radius);
+    border: 1px solid var(--gamer-border);
+    background: var(--gamer-bg);
+    color: #f3f4f6;
+    padding: 10px 14px;
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.search-form input[type="search"] {
+    padding-right: 44px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9ca3af;
+    opacity: 1;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+.wp-block-search__input:focus {
+    outline: none;
+    border-color: var(--gamer-primary);
+    box-shadow: 0 0 0 3px var(--gamer-glow);
+}
+
+/* Buttons */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.wp-block-search__button,
+.search-submit,
+.wp-block-button__link {
+    border-radius: var(--gamer-radius);
+    background: var(--gamer-primary);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+.wp-block-search__button:hover,
+.search-submit:hover,
+.wp-block-button__link:hover {
+    background: var(--gamer-accent);
+}
+
+button:active,
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+.wp-block-search__button:active,
+.search-submit:active,
+.wp-block-button__link:active {
+    transform: scale(0.98);
+}
+
 /* Custom Electric Blue Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
