@@ -3,7 +3,8 @@ Theme Name: Gamer Central
 Theme URI: https://gamer-central.site.je
 Author: GamerNation12
 Description: An advanced, professional dark-mode-first gaming theme featuring deep obsidian slate surfaces, electric blue accents, glassmorphism, and smooth animations for GamerNation12.
-Version: 1.5
+Version: 1.6
+Update URI: https://github.com/GamerNation12/Gamer-Central-Theme
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gamer-central
@@ -16,7 +17,7 @@ Text Domain: gamer-central
     --gamer-border: #1f2937;
     --gamer-primary: #3b82f6;
     --gamer-accent: #60a5fa;
-    --gamer-glow: rgba(59, 130, 246, 0.2);
+    --gamer-glow: rgba(59, 130, 246, 0.25);
     --gamer-radius: 14px;
 }
 
