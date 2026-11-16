@@ -25,7 +25,7 @@
             $gamer_central_description = get_bloginfo( 'description', 'display' );
             if ( $gamer_central_description || is_customize_preview() ) :
                 ?>
-                <p class="site-description"><?php echo $gamer_central_description; ?></p>
+                <p class="site-description" style="color: #9ca3af; margin-top: 5px;"><?php echo $gamer_central_description; ?></p>
             <?php endif; ?>
         </div>
         <nav id="site-navigation" class="main-navigation">

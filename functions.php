@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( '_S_VERSION' ) ) {
-    define( '_S_VERSION', '1.7.0' );
+    define( '_S_VERSION', '1.9' );
 }
 
 function gamer_central_setup() {
@@ -45,7 +45,7 @@ function gamer_central_widgets_init() {
             'description'   => esc_html__( 'Add widgets here.', 'gamer-central' ),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget'  => '</section>',
-            'before_title'  => '<h2 class="widget-title" style="font-size:18px; margin-top:0; margin-bottom:15px;">',
+            'before_title'  => '<h2 class="widget-title" style="font-size:18px; margin-top:0; margin-bottom:15px; color:#ffffff;">',
             'after_title'   => '</h2>',
         )
     );

@@ -2,8 +2,8 @@
 Theme Name: Gamer Central
 Theme URI: https://gamer-central.site.je
 Author: GamerNation12
-Description: An advanced, professional dark-mode-first gaming theme featuring deep obsidian slate surfaces, electric blue accents, glassmorphism, and smooth animations for GamerNation12.
-Version: 1.7
+Description: An advanced, professional dark-mode-first gaming theme featuring high-contrast readability, deep obsidian slate surfaces, electric blue accents, glassmorphism, and smooth animations for GamerNation12.
+Version: 1.9
 Update URI: https://github.com/GamerNation12/Gamer-Central-Theme
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -106,7 +106,7 @@ body.light .site-title a {
 
 .main-navigation a {
     text-decoration: none;
-    color: #9ca3af;
+    color: #e5e7eb;
     font-weight: 600;
     position: relative;
     padding-bottom: 4px;
@@ -132,7 +132,7 @@ body.light .main-navigation a {
 }
 
 .main-navigation a:hover {
-    color: #ffffff;
+    color: #60a5fa;
 }
 
 body.light .main-navigation a:hover {
@@ -156,7 +156,7 @@ body.light .main-navigation a:hover {
     }
 }
 
-/* Advanced Glassmorphic Hover Cards */
+/* High Contrast Glassmorphic Hover Cards & Widgets */
 .widget, .hentry, .post-card, article {
     background: var(--gamer-surface);
     border: 1px solid var(--gamer-border);
@@ -164,6 +164,36 @@ body.light .main-navigation a:hover {
     border-radius: var(--gamer-radius);
     margin-bottom: 28px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    color: #f3f4f6;
+}
+
+.widget a, .hentry a, article a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+.widget a:hover, .hentry a:hover, article a:hover {
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
+.widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.widget ul li {
+    margin-bottom: 10px;
+}
+
+.widget ul li a {
+    color: #e5e7eb;
+    font-weight: 500;
+}
+
+.widget ul li a:hover {
+    color: #60a5fa;
 }
 
 .widget:hover, .hentry:hover, article:hover {
@@ -177,7 +207,16 @@ html.light .widget, html.light .hentry, html.light article,
 [data-theme="light"] .widget, [data-theme="light"] .hentry, [data-theme="light"] article {
     background: #ffffff !important;
     border-color: #e2e8f0 !important;
+    color: #0f172a !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+body.light .widget a, body.light .hentry a, body.light article a {
+    color: #2563eb !important;
+}
+
+body.light .widget ul li a {
+    color: #1e293b !important;
 }
 
 body.light .widget:hover, body.light .hentry:hover, body.light article:hover,
