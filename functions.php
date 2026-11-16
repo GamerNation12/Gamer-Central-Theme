@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( '_S_VERSION' ) ) {
-    define( '_S_VERSION', '2.1' );
+    define( '_S_VERSION', '2.2' );
 }
 
 function gamer_central_setup() {
@@ -56,3 +56,56 @@ function gamer_central_scripts() {
     wp_enqueue_style( 'gamer-central-style', get_stylesheet_uri(), array(), _S_VERSION );
 }
 add_action( 'wp_enqueue_scripts', 'gamer_central_scripts' );
+
+function gamer_central_seo() {
+    global $post;
+    $site_name = get_bloginfo( 'name' );
+    $description = get_bloginfo( 'description' );
+    $image = get_theme_file_uri( '/screenshot.png' );
+
+    $title = $site_name;
+    $desc = $description;
+    $type = 'website';
+    $url = home_url( '/' );
+    $img = $image;
+
+    if ( is_singular() && $post ) {
+        $title = get_the_title( $post );
+        $desc = get_the_excerpt( $post ) ?: $description;
+        $type = 'article';
+        $url = get_permalink( $post );
+        if ( has_post_thumbnail( $post ) ) {
+            $img = get_the_post_thumbnail_url( $post, 'large' );
+        }
+    }
+    ?>
+    <meta name="description" content="<?php echo esc_attr( $desc ); ?>">
+    <meta property="og:title" content="<?php echo esc_attr( $title ); ?>">
+    <meta property="og:description" content="<?php echo esc_attr( $desc ); ?>">
+    <meta property="og:type" content="<?php echo esc_attr( $type ); ?>">
+    <meta property="og:url" content="<?php echo esc_url( $url ); ?>">
+    <meta property="og:image" content="<?php echo esc_url( $img ); ?>">
+    <meta property="og:site_name" content="<?php echo esc_attr( $site_name ); ?>">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?php echo esc_attr( $title ); ?>">
+    <meta name="twitter:description" content="<?php echo esc_attr( $desc ); ?>">
+    <meta name="twitter:image" content="<?php echo esc_url( $img ); ?>">
+    <link rel="canonical" href="<?php echo esc_url( $url ); ?>">
+    <?php
+}
+add_action( 'wp_head', 'gamer_central_seo' );
+
+function gamer_central_schema() {
+    ?>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "<?php echo esc_js( get_bloginfo( 'name' ) ); ?>",
+        "url": "<?php echo esc_url( home_url( '/' ) ); ?>",
+        "description": "<?php echo esc_js( get_bloginfo( 'description' ) ); ?>"
+    }
+    </script>
+    <?php
+}
+add_action( 'wp_head', 'gamer_central_schema' );

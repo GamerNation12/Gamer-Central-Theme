@@ -3,7 +3,7 @@ Theme Name: Gamer Central
 Theme URI: https://gamer-central.site.je
 Author: GamerNation12
 Description: An advanced, professional dark-mode-first gaming theme featuring built-in direct GitHub branch updates, high-contrast readability, and smooth animations for GamerNation12.
-Version: 2.1
+Version: 2.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gamer-central
@@ -333,6 +333,44 @@ input[type="reset"]:active,
 .search-submit:active,
 .wp-block-button__link:active {
     transform: scale(0.98);
+}
+
+/* Responsive Embeds - YouTube, video, social embeds */
+.wp-embed,
+iframe,
+embed,
+object,
+video {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--gamer-radius);
+    border: 1px solid var(--gamer-border);
+    display: block;
+    margin: 0 auto 28px;
+    background: var(--gamer-bg);
+}
+
+.wp-embed-wrapper,
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--gamer-radius);
+    border: 1px solid var(--gamer-border);
+    margin-bottom: 28px;
+    background: var(--gamer-bg);
+}
+
+.wp-embed-wrapper iframe,
+.embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--gamer-radius);
+    border: none;
 }
 
 /* Custom Electric Blue Scrollbar */
