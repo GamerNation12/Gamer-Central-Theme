@@ -1,0 +1,217 @@
+/*
+Theme Name: Gamer Central
+Theme URI: https://gamer-central.site.je
+Author: GamerNation12
+Description: An advanced, professional dark-mode-first gaming theme featuring deep obsidian slate surfaces, electric blue accents, glassmorphism, and smooth animations for GamerNation12.
+Version: 1.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: gamer-central
+*/
+
+:root {
+    --transition-speed: 0.3s;
+    --gamer-bg: #090d16;
+    --gamer-surface: #111827;
+    --gamer-border: #1f2937;
+    --gamer-primary: #3b82f6;
+    --gamer-accent: #60a5fa;
+    --gamer-glow: rgba(59, 130, 246, 0.2);
+    --gamer-radius: 14px;
+}
+
+/* Smooth Global Animations & Transitions */
+* {
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease, transform 0.25s ease;
+}
+
+body {
+    background-color: var(--gamer-bg);
+    color: #f3f4f6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body.light, html.light, [data-theme="light"] {
+    background-color: #f8fafc !important;
+    color: #0f172a !important;
+}
+
+.site {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.site-header {
+    background: var(--gamer-surface);
+    border: 1px solid var(--gamer-border);
+    padding: 28px;
+    border-radius: var(--gamer-radius);
+    margin-bottom: 28px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    animation: slideDown 0.4s ease-out;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body.light .site-header, html.light .site-header {
+    background: #ffffff !important;
+    border-color: #e2e8f0 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+.site-title a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.light .site-title a {
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    color: #0f172a !important;
+}
+
+.site-title a:hover {
+    opacity: 0.85;
+}
+
+.main-navigation ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 24px;
+    margin-top: 18px;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: #9ca3af;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+body.light .main-navigation a {
+    color: #475569 !important;
+}
+
+.main-navigation a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--gamer-primary);
+    transition: width 0.3s ease;
+}
+
+.main-navigation a:hover::after {
+    width: 100%;
+}
+
+.main-navigation a:hover {
+    color: #ffffff;
+}
+
+body.light .main-navigation a:hover {
+    color: #0f172a !important;
+}
+
+.content-area {
+    float: left;
+    width: 68%;
+}
+
+.widget-area {
+    float: right;
+    width: 28%;
+}
+
+@media (max-width: 768px) {
+    .content-area, .widget-area {
+        float: none;
+        width: 100%;
+    }
+}
+
+/* Advanced Glassmorphic Hover Cards */
+.widget, .hentry, .post-card, article {
+    background: var(--gamer-surface);
+    border: 1px solid var(--gamer-border);
+    padding: 28px;
+    border-radius: var(--gamer-radius);
+    margin-bottom: 28px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.widget:hover, .hentry:hover, article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 35px -8px var(--gamer-glow), 0 8px 12px -6px rgba(0, 0, 0, 0.6);
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+body.light .widget, body.light .hentry, body.light article,
+html.light .widget, html.light .hentry, html.light article,
+[data-theme="light"] .widget, [data-theme="light"] .hentry, [data-theme="light"] article {
+    background: #ffffff !important;
+    border-color: #e2e8f0 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+body.light .widget:hover, body.light .hentry:hover, body.light article:hover,
+html.light .widget:hover, html.light .hentry:hover, html.light article:hover,
+[data-theme="light"] .widget:hover, [data-theme="light"] .hentry:hover, [data-theme="light"] article:hover {
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+.site-footer {
+    clear: both;
+    border-top: 1px solid var(--gamer-border);
+    padding: 35px 0;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+body.light .site-footer, html.light .site-footer {
+    border-color: #e2e8f0 !important;
+    color: #64748b !important;
+}
+
+/* Custom Electric Blue Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+    background: #1f2937;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gamer-primary);
+}
