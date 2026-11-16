@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( '_S_VERSION' ) ) {
-    define( '_S_VERSION', '2.4' );
+    define( '_S_VERSION', '2.5' );
 }
 
 function gamer_central_setup() {
@@ -114,7 +114,13 @@ function gamer_central_seo() {
     <meta name="twitter:image" content="<?php echo esc_url( $img ); ?>">
     <meta name="twitter:image:alt" content="<?php echo esc_attr( $title ); ?>">
     <?php else : ?>
+    <meta property="og:image" content="<?php echo esc_url( $sharing_image ); ?>">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="<?php echo esc_attr( $title ); ?>">
     <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="<?php echo esc_url( $sharing_image ); ?>">
+    <meta name="twitter:image:alt" content="<?php echo esc_attr( $title ); ?>">
     <?php endif; ?>
     <meta property="og:site_name" content="<?php echo esc_attr( $site_name ); ?>">
     <meta name="twitter:title" content="<?php echo esc_attr( $title ); ?>">
