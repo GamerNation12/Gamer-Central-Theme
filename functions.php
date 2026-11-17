@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( '_S_VERSION' ) ) {
-    define( '_S_VERSION', '3.5' );
+    define( '_S_VERSION', '3.6' );
 }
 
 function gamer_central_setup() {
@@ -102,6 +102,9 @@ function gamer_central_seo() {
     <meta name="description" content="<?php echo esc_attr( $desc ); ?>">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#090d16">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta property="og:title" content="<?php echo esc_attr( $title ); ?>">
     <meta property="og:description" content="<?php echo esc_attr( $desc ); ?>">
     <meta property="og:type" content="<?php echo esc_attr( $type ); ?>">
@@ -162,3 +165,10 @@ function gamer_central_schema() {
     <?php
 }
 add_action( 'wp_head', 'gamer_central_schema' );
+
+function gamer_central_cache_control() {
+    header( 'Cache-Control: no-cache, no-store, must-revalidate' );
+    header( 'Pragma: no-cache' );
+    header( 'Expires: 0' );
+}
+add_action( 'wp', 'gamer_central_cache_control' );
