@@ -3,7 +3,7 @@ Theme Name: Gamer Central
 Theme URI: https://gamer-central.site.je
 Author: GamerNation12
 Description: An advanced, professional dark-mode-first gaming theme featuring built-in direct GitHub branch updates, high-contrast readability, and smooth animations for GamerNation12.
-Version: 3.0
+Version: 3.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gamer-central
@@ -446,9 +446,22 @@ html.light .home-lead {
     background: var(--gamer-surface);
     border: 1px solid var(--gamer-border);
     border-radius: var(--gamer-radius);
-    padding: 32px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
     color: #f3f4f6;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.wpforms-form h2,
+.wpforms-form h3,
+.wpforms-form .wpforms-title {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
 .wpforms-form .wpforms-field-label,
@@ -456,10 +469,13 @@ html.light .home-lead {
     color: #e5e7eb;
     font-weight: 600;
     font-size: 15px;
+    display: block;
+    margin-bottom: 8px;
 }
 
 .wpforms-form .wpforms-required-label {
     color: #ef4444;
+    margin-left: 4px;
 }
 
 .wpforms-form .wpforms-input,
@@ -467,14 +483,15 @@ html.light .home-lead {
 .wpforms-form input,
 .wpforms-form textarea,
 .wpforms-form select {
-    background: var(--gamer-bg);
+    background: #0b1120;
     border: 1px solid var(--gamer-border);
     border-radius: var(--gamer-radius);
     color: #f3f4f6;
-    padding: 12px 16px;
+    padding: 14px 18px;
     font-size: 16px;
     width: 100%;
     box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
 .wpforms-form .wpforms-input:focus,
@@ -485,49 +502,106 @@ html.light .home-lead {
     outline: none;
     border-color: var(--gamer-primary);
     box-shadow: 0 0 0 3px var(--gamer-glow);
+    background: #0c1426;
 }
 
 .wpforms-form .wpforms-submit,
 .wpforms-form button[type="submit"],
 .wpforms-form input[type="submit"] {
-    background: var(--gamer-primary);
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
     color: #ffffff;
     border: none;
     border-radius: var(--gamer-radius);
-    padding: 12px 28px;
-    font-size: 16px;
-    font-weight: 600;
+    padding: 14px 32px;
+    font-size: 17px;
+    font-weight: 700;
     cursor: pointer;
     width: auto;
     display: inline-block;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.35);
+    transition: all 0.3s ease;
 }
 
 .wpforms-form .wpforms-submit:hover,
 .wpforms-form button[type="submit"]:hover,
 .wpforms-form input[type="submit"]:hover {
-    background: var(--gamer-accent);
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.45);
 }
 
 .wpforms-form .wpforms-submit:active,
 .wpforms-form button[type="submit"]:active,
 .wpforms-form input[type="submit"]:active {
-    transform: scale(0.98);
+    transform: translateY(0);
+    scale: 0.98;
 }
 
 .wpforms-form .wpforms-field {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .wpforms-form .wpforms-field-container {
     display: flex;
-    gap: 16px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .wpforms-form .wpforms-field-container .wpforms-field {
     flex: 1;
-    min-width: 200px;
+    min-width: 220px;
     margin-bottom: 0;
+}
+
+/* Hide WPForms "First"/"Last" sub-labels on Name field */
+.wpforms-form .wpforms-field-name .wpforms-sub-labels,
+.wpforms-form .wpforms-field-large .wpforms-sub-labels,
+.wpforms-form .wpforms-sub-labels {
+    display: none;
+}
+
+.wpforms-form .wpforms-field-name input {
+    margin-bottom: 0;
+}
+
+/* Light mode overrides */
+body.light .wpforms-form,
+html.light .wpforms-form {
+    background: #ffffff !important;
+    border-color: #e2e8f0 !important;
+    color: #0f172a !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+body.light .wpforms-form h2,
+body.light .wpforms-form h3,
+body.light .wpforms-form .wpforms-title,
+html.light .wpforms-form h2,
+html.light .wpforms-form h3,
+html.light .wpforms-form .wpforms-title {
+    color: #0f172a !important;
+}
+
+body.light .wpforms-form .wpforms-field-label,
+body.light .wpforms-form label,
+html.light .wpforms-form .wpforms-field-label,
+html.light .wpforms-form label {
+    color: #374151 !important;
+}
+
+body.light .wpforms-form .wpforms-input,
+body.light .wpforms-form .wpforms-textarea,
+body.light .wpforms-form input,
+body.light .wpforms-form textarea,
+body.light .wpforms-form select,
+html.light .wpforms-form .wpforms-input,
+html.light .wpforms-form .wpforms-textarea,
+html.light .wpforms-form input,
+html.light .wpforms-form textarea,
+html.light .wpforms-form select {
+    background: #f8fafc !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
 }
 
 /* Custom Electric Blue Scrollbar */
