@@ -3,7 +3,7 @@ Theme Name: Gamer Central
 Theme URI: https://gamer-central.site.je
 Author: GamerNation12
 Description: An advanced, professional dark-mode-first gaming theme featuring built-in direct GitHub branch updates, high-contrast readability, and smooth animations for GamerNation12.
-Version: 3.2
+Version: 3.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gamer-central
@@ -594,7 +594,43 @@ body .wpforms-form .wpforms-field-name input {
     margin-bottom: 0 !important;
 }
 
+/* Hide WPForms Name field sub-labels ("First"/"Last") and split inputs */
+#page .wpforms-form .wpforms-field-name .wpforms-sub-labels,
+#page .wpforms-form .wpforms-field-name .wpforms-sub-label,
+body .wpforms-form .wpforms-field-name .wpforms-sub-labels,
+body .wpforms-form .wpforms-field-name .wpforms-sub-label {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+#page .wpforms-form .wpforms-field-name .wpforms-field-container,
+body .wpforms-form .wpforms-field-name .wpforms-field-container {
+    flex-direction: column !important;
+    gap: 8px !important;
+}
+
+#page .wpforms-form .wpforms-field-name .wpforms-field-container .wpforms-field,
+body .wpforms-form .wpforms-field-name .wpforms-field-container .wpforms-field {
+    flex: none !important;
+    min-width: auto !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
+}
+
 /* Custom Electric Blue Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+    background: #1f2937;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gamer-primary);
+}
 ::-webkit-scrollbar {
     width: 8px;
 }
