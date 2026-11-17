@@ -4,6 +4,15 @@ get_header();
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
         <?php
+        if ( is_front_page() && is_home() ) :
+            ?>
+            <section class="home-welcome">
+                <h1 class="home-title">Welcome to Gamer Central</h1>
+                <p class="home-lead">Your destination for gaming news, reviews, videos, and community discussion.</p>
+            </section>
+        <?php endif; ?>
+
+        <?php
         if ( have_posts() ) :
             while ( have_posts() ) :
                 the_post();
@@ -15,9 +24,8 @@ get_header();
                     <div class="entry-content">
                         <?php
                         if ( has_post_thumbnail() ) {
-                            the_post_thumbnail('large', array('style' => 'width:100%; height:auto; border-radius:10px; margin-bottom:15px;'));
+                            the_post_thumbnail('large', array('style' => 'width:100%; height:auto; border-radius:14px; margin-bottom:15px;'));
                         }
-                        the_excerpt();
                         ?>
                     </div>
                 </article>

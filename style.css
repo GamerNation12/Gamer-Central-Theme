@@ -3,7 +3,7 @@ Theme Name: Gamer Central
 Theme URI: https://gamer-central.site.je
 Author: GamerNation12
 Description: An advanced, professional dark-mode-first gaming theme featuring built-in direct GitHub branch updates, high-contrast readability, and smooth animations for GamerNation12.
-Version: 2.5
+Version: 2.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gamer-central
@@ -371,6 +371,74 @@ video {
     height: 100%;
     border-radius: var(--gamer-radius);
     border: none;
+}
+
+.site-branding {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.site-logo-link img {
+    border-radius: var(--gamer-radius);
+    border: 1px solid var(--gamer-border);
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Home page welcome section */
+.home-welcome {
+    background: var(--gamer-surface);
+    border: 1px solid var(--gamer-border);
+    padding: 32px 28px;
+    border-radius: var(--gamer-radius);
+    margin-bottom: 28px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.home-title {
+    margin: 0 0 10px;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home-lead {
+    margin: 0;
+    font-size: 18px;
+    color: #cbd5e1;
+}
+
+body.light .site-logo-link img,
+html.light .site-logo-link img {
+    border-color: #e2e8f0 !important;
+}
+
+body.light .home-welcome,
+html.light .home-welcome {
+    background: #ffffff !important;
+    border-color: #e2e8f0 !important;
+    color: #0f172a !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+body.light .home-title,
+html.light .home-title {
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+    color: #0f172a !important;
+}
+
+body.light .home-lead,
+html.light .home-lead {
+    color: #475569 !important;
 }
 
 /* Custom Electric Blue Scrollbar */
