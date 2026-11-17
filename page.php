@@ -17,6 +17,7 @@ get_header();
             </section>
         <?php endif; ?>
 
+        <?php if ( ! is_front_page() ) : ?>
         <?php
         while ( have_posts() ) :
             the_post();
@@ -41,6 +42,7 @@ get_header();
             <?php
         endwhile;
         ?>
+        <?php endif; ?>
     </main>
 </div>
 
