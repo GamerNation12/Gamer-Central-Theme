@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( '_S_VERSION' ) ) {
-    define( '_S_VERSION', '3.1' );
+    define( '_S_VERSION', '3.2' );
 }
 
 function gamer_central_setup() {
@@ -54,6 +54,7 @@ add_action( 'widgets_init', 'gamer_central_widgets_init' );
 
 function gamer_central_scripts() {
     wp_enqueue_style( 'gamer-central-style', get_stylesheet_uri(), array(), _S_VERSION );
+    wp_enqueue_script( 'gamer-central-debug', get_theme_file_uri( '/assets/js/debug.js' ), array(), _S_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'gamer_central_scripts' );
 
