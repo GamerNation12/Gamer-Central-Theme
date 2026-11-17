@@ -3,7 +3,7 @@ Theme Name: Gamer Central
 Theme URI: https://gamer-central.site.je
 Author: GamerNation12
 Description: An advanced, professional dark-mode-first gaming theme featuring built-in direct GitHub branch updates, high-contrast readability, and smooth animations for GamerNation12.
-Version: 3.4
+Version: 3.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gamer-central
@@ -594,18 +594,26 @@ body .wpforms-form .wpforms-field-name input {
     margin-bottom: 0 !important;
 }
 
-/* Hide WPForms Name field sub-labels ("First"/"Last") */
-#page .wpforms-form .wpforms-field-name .wpforms-field-container label,
+/* Hide WPForms Name field sub-labels ("First"/"Last") - target .wpforms-label specifically */
+#page .wpforms-form .wpforms-field-name .wpforms-label,
 #page .wpforms-form .wpforms-field-name .wpforms-sub-labels,
 #page .wpforms-form .wpforms-field-name .wpforms-sub-label,
-body .wpforms-form .wpforms-field-name .wpforms-field-container label,
+body .wpforms-form .wpforms-field-name .wpforms-label,
 body .wpforms-form .wpforms-field-name .wpforms-sub-labels,
-body .wpforms-form .wpforms-field-name .wpforms-sub-label {
+body .wpforms-form .wpforms-field-name .wpforms-sub-label,
+#page .wpforms-form .wpforms-field-name .wpforms-field-container label,
+body .wpforms-form .wpforms-field-name .wpforms-field-container label {
     display: none !important;
     visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 0 !important;
 }
 
-/* Keep Name inputs side-by-side but full-width within their block */
+/* Keep Name inputs side-by-side with no gap labels */
 #page .wpforms-form .wpforms-field-name .wpforms-field-block,
 body .wpforms-form .wpforms-field-name .wpforms-field-block {
     flex: 1 !important;
