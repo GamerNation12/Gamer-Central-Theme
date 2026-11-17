@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( '_S_VERSION' ) ) {
-    define( '_S_VERSION', '3.6' );
+    define( '_S_VERSION', '3.7' );
 }
 
 function gamer_central_setup() {

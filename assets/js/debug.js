@@ -1,7 +1,7 @@
 /* Gamer Central Theme - Debug Logging */
 (function() {
     console.log('%c🎮 Gamer Central Theme loaded', 'color: #60a5fa; font-weight: 700; font-size: 16px;');
-    console.log('Version: 3.2');
+    console.log('Version: 3.7');
     console.log('Site URL: ' + window.location.origin);
 
     // Debug WPForms if present
