@@ -3,7 +3,7 @@ Theme Name: Gamer Central
 Theme URI: https://gamer-central.site.je
 Author: GamerNation12
 Description: An advanced, professional dark-mode-first gaming theme featuring built-in direct GitHub branch updates, high-contrast readability, and smooth animations for GamerNation12.
-Version: 3.3
+Version: 3.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gamer-central
@@ -594,25 +594,28 @@ body .wpforms-form .wpforms-field-name input {
     margin-bottom: 0 !important;
 }
 
-/* Hide WPForms Name field sub-labels ("First"/"Last") and split inputs */
+/* Hide WPForms Name field sub-labels ("First"/"Last") */
+#page .wpforms-form .wpforms-field-name .wpforms-field-container label,
 #page .wpforms-form .wpforms-field-name .wpforms-sub-labels,
 #page .wpforms-form .wpforms-field-name .wpforms-sub-label,
+body .wpforms-form .wpforms-field-name .wpforms-field-container label,
 body .wpforms-form .wpforms-field-name .wpforms-sub-labels,
 body .wpforms-form .wpforms-field-name .wpforms-sub-label {
     display: none !important;
     visibility: hidden !important;
 }
 
-#page .wpforms-form .wpforms-field-name .wpforms-field-container,
-body .wpforms-form .wpforms-field-name .wpforms-field-container {
-    flex-direction: column !important;
-    gap: 8px !important;
+/* Keep Name inputs side-by-side but full-width within their block */
+#page .wpforms-form .wpforms-field-name .wpforms-field-block,
+body .wpforms-form .wpforms-field-name .wpforms-field-block {
+    flex: 1 !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
 }
 
-#page .wpforms-form .wpforms-field-name .wpforms-field-container .wpforms-field,
-body .wpforms-form .wpforms-field-name .wpforms-field-container .wpforms-field {
-    flex: none !important;
-    min-width: auto !important;
+#page .wpforms-form .wpforms-field-name .wpforms-field-block input,
+body .wpforms-form .wpforms-field-name .wpforms-field-block input {
     width: 100% !important;
     margin-bottom: 0 !important;
 }
