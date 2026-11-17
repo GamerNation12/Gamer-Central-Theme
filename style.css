@@ -3,7 +3,7 @@ Theme Name: Gamer Central
 Theme URI: https://gamer-central.site.je
 Author: GamerNation12
 Description: An advanced, professional dark-mode-first gaming theme featuring built-in direct GitHub branch updates, high-contrast readability, and smooth animations for GamerNation12.
-Version: 2.9
+Version: 3.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gamer-central
@@ -439,6 +439,95 @@ html.light .home-title {
 body.light .home-lead,
 html.light .home-lead {
     color: #475569 !important;
+}
+
+/* WPForms - Contact Form Styling */
+.wpforms-form {
+    background: var(--gamer-surface);
+    border: 1px solid var(--gamer-border);
+    border-radius: var(--gamer-radius);
+    padding: 32px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    color: #f3f4f6;
+}
+
+.wpforms-form .wpforms-field-label,
+.wpforms-form label {
+    color: #e5e7eb;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.wpforms-form .wpforms-required-label {
+    color: #ef4444;
+}
+
+.wpforms-form .wpforms-input,
+.wpforms-form .wpforms-textarea,
+.wpforms-form input,
+.wpforms-form textarea,
+.wpforms-form select {
+    background: var(--gamer-bg);
+    border: 1px solid var(--gamer-border);
+    border-radius: var(--gamer-radius);
+    color: #f3f4f6;
+    padding: 12px 16px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.wpforms-form .wpforms-input:focus,
+.wpforms-form .wpforms-textarea:focus,
+.wpforms-form input:focus,
+.wpforms-form textarea:focus,
+.wpforms-form select:focus {
+    outline: none;
+    border-color: var(--gamer-primary);
+    box-shadow: 0 0 0 3px var(--gamer-glow);
+}
+
+.wpforms-form .wpforms-submit,
+.wpforms-form button[type="submit"],
+.wpforms-form input[type="submit"] {
+    background: var(--gamer-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--gamer-radius);
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: auto;
+    display: inline-block;
+}
+
+.wpforms-form .wpforms-submit:hover,
+.wpforms-form button[type="submit"]:hover,
+.wpforms-form input[type="submit"]:hover {
+    background: var(--gamer-accent);
+}
+
+.wpforms-form .wpforms-submit:active,
+.wpforms-form button[type="submit"]:active,
+.wpforms-form input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+.wpforms-form .wpforms-field {
+    margin-bottom: 20px;
+}
+
+.wpforms-form .wpforms-field-container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.wpforms-form .wpforms-field-container .wpforms-field {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 0;
 }
 
 /* Custom Electric Blue Scrollbar */
