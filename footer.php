@@ -11,8 +11,9 @@
 <?php wp_footer(); ?>
 <script>
 if (window.location.search.includes('doing_wp_cron')) {
-    const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
-    window.history.replaceState({}, document.title, cleanUrl);
+    const url = new URL(window.location.href);
+    url.searchParams.delete('doing_wp_cron');
+    window.history.replaceState({}, document.title, url.toString());
 }
 </script>
 </body>
