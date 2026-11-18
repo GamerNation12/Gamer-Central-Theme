@@ -17,19 +17,19 @@ get_header();
             </section>
         <?php endif; ?>
 
-        <?php if ( ! is_front_page() ) : ?>
-        <?php
-        while ( have_posts() ) :
+        <?php while ( have_posts() ) :
             the_post();
             ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <header class="entry-header">
-                    <h1 class="entry-title" style="margin-top: 0; margin-bottom: 20px; font-size: 28px; font-weight: 800; color: #f3f4f6;"><?php the_title(); ?></h1>
+                    <?php if ( ! is_front_page() ) : ?>
+                        <h1 class="entry-title" style="margin-top: 0; margin-bottom: 20px; font-size: 28px; font-weight: 800; color: #f3f4f6;"><?php the_title(); ?></h1>
+                    <?php endif; ?>
                 </header>
                 <div class="entry-content">
                     <?php
                     the_content();
-                    
+
                     wp_link_pages(
                         array(
                             'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gamer-central' ),
@@ -42,7 +42,6 @@ get_header();
             <?php
         endwhile;
         ?>
-        <?php endif; ?>
     </main>
 </div>
 
