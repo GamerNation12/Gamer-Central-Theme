@@ -9,5 +9,11 @@
     </footer>
 </div>
 <?php wp_footer(); ?>
+<script>
+if (window.location.search.includes('doing_wp_cron')) {
+    const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+    window.history.replaceState({}, document.title, cleanUrl);
+}
+</script>
 </body>
 </html>
