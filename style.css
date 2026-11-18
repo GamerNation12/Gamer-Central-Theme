@@ -674,6 +674,18 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
     margin-bottom: 14px;
 }
 
+#secondary .widget a {
+    color: inherit;
+    text-decoration: none;
+    cursor: default;
+}
+
+#secondary .widget a:hover {
+    color: inherit;
+    text-decoration: none;
+    opacity: 1;
+}
+
 #secondary .widget:last-child > *:last-child {
     margin-bottom: 0;
 }
