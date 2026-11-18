@@ -651,18 +651,19 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
 /* YouTube Subs widget fix - prevent content crowding/overflow */
 #secondary .widget {
     overflow: visible;
+    padding: 24px;
 }
 
 #secondary .widget img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto 12px;
+    margin: 0 auto 16px;
     border-radius: var(--gamer-radius);
 }
 
 #secondary .widget .widget-title {
-    margin-bottom: 14px;
+    margin-bottom: 16px;
     font-size: 18px;
     font-weight: 800;
     color: #ffffff;
@@ -670,5 +671,9 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
 }
 
 #secondary .widget > * {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
+}
+
+#secondary .widget:last-child > *:last-child {
+    margin-bottom: 0;
 }
