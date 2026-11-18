@@ -642,16 +642,33 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--gamer-primary);
 }
-::-webkit-scrollbar {
-    width: 8px;
+
+/* Hide Search widget */
+.widget_search {
+    display: none !important;
 }
-::-webkit-scrollbar-track {
-    background: #090d16;
+
+/* YouTube Subs widget fix - prevent content crowding/overflow */
+#secondary .widget {
+    overflow: visible;
 }
-::-webkit-scrollbar-thumb {
-    background: #1f2937;
-    border-radius: 4px;
+
+#secondary .widget img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 12px;
+    border-radius: var(--gamer-radius);
 }
-::-webkit-scrollbar-thumb:hover {
-    background: var(--gamer-primary);
+
+#secondary .widget .widget-title {
+    margin-bottom: 14px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #ffffff;
+    text-align: center;
+}
+
+#secondary .widget > * {
+    margin-bottom: 12px;
 }
