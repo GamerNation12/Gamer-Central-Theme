@@ -660,6 +660,8 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
 
 #secondary .widget {
     padding: 24px;
+    width: auto !important;
+    max-width: none !important;
 }
 
 #secondary .widget-text,
@@ -700,6 +702,35 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
     max-width: none !important;
     overflow: visible !important;
     white-space: normal !important;
+}
+
+#secondary .widget a img,
+#secondary .widget a iframe,
+#secondary .widget embed,
+#secondary .widget object,
+#secondary .widget canvas,
+#secondary .widget video,
+#secondary .widget audio {
+    display: inline-block !important;
+    max-width: none !important;
+    overflow: visible !important;
+    white-space: normal !important;
+}
+
+#secondary .widget .widget-title,
+#secondary .widget .widgettitle,
+#secondary .widget h2,
+#secondary .widget h3,
+#secondary .widget h4,
+#secondary .widget p,
+#secondary .widget span,
+#secondary .widget div,
+#secondary .widget li {
+    overflow: visible !important;
+    max-width: none !important;
+    white-space: normal !important;
+    text-overflow: unset !important;
+    width: auto !important;
 }
 
 #secondary .widget a img,
