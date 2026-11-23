@@ -688,12 +688,14 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
 }
 
 #secondary .g-ytsubscribe iframe,
-#secondary iframe[src*="tube-scope.com"],
-#secondary iframe[src*="livecounts.io"] {
+#secondary iframe[src*="livecounts.nl"],
+#secondary iframe[src*="livecounts.io"],
+#secondary iframe[src*="tube-scope.com"] {
     overflow: visible !important;
     max-width: none !important;
-    width: 340px !important;
-    height: 150px !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    height: 106px !important;
     border: 0 !important;
     white-space: normal !important;
     text-overflow: unset !important;
@@ -706,12 +708,9 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
     max-width: none !important;
     text-align: center !important;
 }
-#secondary .g-ytsubscribe a,
-#secondary .widget .g-ytsubscribe a {
-    display: inline-block !important;
-    overflow: visible !important;
-    max-width: none !important;
-    text-decoration: none !important;
+
+#secondary .widget:has(.g-ytsubscribe) {
+    padding: 16px;
 }
 
 #secondary .widget img,
