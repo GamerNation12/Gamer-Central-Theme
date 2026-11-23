@@ -688,16 +688,35 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
 }
 
 #secondary .g-ytsubscribe iframe,
+#secondary iframe[src*="tube-scope.com"],
 #secondary iframe[src*="livecounts.io"] {
     overflow: visible !important;
     max-width: none !important;
-    width: 300px !important;
-    height: 80px !important;
+    width: 340px !important;
+    height: 150px !important;
     border: 0 !important;
     white-space: normal !important;
     text-overflow: unset !important;
     display: block !important;
     margin: 0 auto !important;
+}
+#secondary .g-ytsubscribe p,
+#secondary .widget p {
+    margin: 6px 0 0 !important;
+    font-size: 13px !important;
+    text-align: center !important;
+    overflow: visible !important;
+    max-width: none !important;
+    white-space: normal !important;
+}
+#secondary .g-ytsubscribe p a,
+#secondary .widget p a {
+    color: #60a5fa !important;
+    text-decoration: none !important;
+    word-break: break-word !important;
+    overflow: visible !important;
+    max-width: none !important;
+    white-space: normal !important;
 }
 
 #secondary .widget img,
