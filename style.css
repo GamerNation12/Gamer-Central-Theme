@@ -142,12 +142,18 @@ body.light .main-navigation a:hover {
 
 .content-area {
     float: left;
-    width: 68%;
+    width: 65%;
 }
 
 .widget-area {
     float: right;
-    width: 34%;
+    width: 33%;
+}
+
+.site::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 @media (max-width: 768px) {
@@ -166,6 +172,7 @@ body.light .main-navigation a:hover {
     margin-bottom: 28px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     color: #f3f4f6;
+    box-sizing: border-box;
 }
 
 .widget a, .hentry a, article a {
@@ -677,6 +684,15 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
     overflow: visible !important;
     max-width: none !important;
     white-space: normal !important;
+}
+
+#secondary .g-ytsubscribe,
+#secondary .g-ytsubscribe * {
+    overflow: visible !important;
+    max-width: none !important;
+    min-width: 210px !important;
+    white-space: normal !important;
+    text-overflow: unset !important;
 }
 
 #secondary .widget img,
