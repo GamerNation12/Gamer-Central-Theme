@@ -717,6 +717,7 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
     position: relative !important;
     overflow: hidden !important;
     border-radius: 16px !important;
+    cursor: pointer !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
 }
 
