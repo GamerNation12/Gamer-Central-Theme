@@ -687,14 +687,17 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
     white-space: normal !important;
 }
 
-#secondary .g-ytsubscribe,
-#secondary .g-ytsubscribe * {
+#secondary .g-ytsubscribe iframe,
+#secondary iframe[src*="livecounts.io"] {
     overflow: visible !important;
     max-width: none !important;
-    min-width: 320px !important;
-    width: 100% !important;
+    width: 300px !important;
+    height: 80px !important;
+    border: 0 !important;
     white-space: normal !important;
     text-overflow: unset !important;
+    display: block !important;
+    margin: 0 auto !important;
 }
 
 #secondary .widget img,
