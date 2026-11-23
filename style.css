@@ -709,39 +709,6 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
     text-align: center !important;
 }
 
-#secondary .g-ytsubscribe .yts-link {
-    display: inline-block !important;
-    width: 100% !important;
-    max-width: 360px !important;
-    position: relative !important;
-    overflow: hidden !important;
-    border-radius: 16px !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-}
-
-#secondary .g-ytsubscribe .yts-link:hover {
-    transform: translateY(-4px) scale(1.02) !important;
-    box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.35), 0 8px 16px -4px rgba(0, 0, 0, 0.6) !important;
-}
-
-#secondary .g-ytsubscribe .yts-link::before {
-    content: '' !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%) !important;
-    opacity: 0 !important;
-    transition: opacity 0.3s ease !important;
-    pointer-events: none !important;
-    border-radius: 16px !important;
-}
-
-#secondary .g-ytsubscribe .yts-link:hover::before {
-    opacity: 1 !important;
-}
-
 #secondary .widget:has(.g-ytsubscribe) {
     background: transparent !important;
     border: none !important;
