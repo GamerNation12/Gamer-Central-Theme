@@ -242,7 +242,7 @@ body.light .site-footer, html.light .site-footer {
 
 /* Fully Rounded UI Elements - Widgets, Search Inputs, Buttons */
 .widget, .hentry, .post-card, article, .site-header {
-    overflow: hidden;
+    border-radius: var(--gamer-radius);
 }
 
 .widget, .hentry, .post-card, article {
@@ -648,30 +648,35 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
     display: none !important;
 }
 
-/* YouTube Subs widget fix - prevent content crowding/overflow */
+/* Sidebar widgets - ensure content is never clipped */
 #secondary .widget {
     overflow: visible;
-    padding: 24px;
+    max-width: 100%;
 }
 
-#secondary .widget img {
+#secondary .widget * {
+    overflow: visible;
+    max-width: 100%;
+    white-space: normal;
+}
+
+#secondary .widget img,
+#secondary .widget iframe,
+#secondary .widget embed,
+#secondary .widget object {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto 16px;
+    margin: 0 auto 12px;
     border-radius: var(--gamer-radius);
 }
 
 #secondary .widget .widget-title {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     font-size: 18px;
     font-weight: 800;
     color: #ffffff;
     text-align: center;
-}
-
-#secondary .widget > * {
-    margin-bottom: 14px;
 }
 
 #secondary .widget a {
@@ -686,32 +691,15 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
     opacity: 1;
 }
 
-#secondary .widget,
-#secondary .widget * {
-    overflow: visible !important;
-}
-
-#secondary .widget img,
-#secondary .widget a,
-#secondary .widget div,
-#secondary .widget span,
-#secondary .widget p,
-#secondary .widget iframe,
-#secondary .widget embed,
-#secondary .widget object {
-    max-width: none !important;
-    max-height: none !important;
-    width: auto !important;
-    height: auto !important;
-    white-space: normal !important;
-    text-overflow: unset !important;
-    overflow: visible !important;
-}
-
 #secondary .widget > * {
-    margin-bottom: 14px !important;
+    margin-bottom: 14px;
 }
 
 #secondary .widget > *:last-child {
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
+}
+
+/* Hide Search widget */
+.widget_search {
+    display: none !important;
 }
