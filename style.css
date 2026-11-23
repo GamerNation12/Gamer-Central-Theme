@@ -701,6 +701,7 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
     text-overflow: unset !important;
     display: block !important;
     margin: 0 auto !important;
+    pointer-events: none !important;
 }
 #secondary .g-ytsubscribe,
 #secondary .widget .g-ytsubscribe {
