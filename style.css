@@ -643,21 +643,18 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
     background: var(--gamer-primary);
 }
 
-/* Hide Search widget */
-.widget_search {
-    display: none !important;
-}
-
 /* Sidebar widgets - ensure content is never clipped */
-#secondary .widget {
-    overflow: visible;
-    max-width: 100%;
+#secondary,
+#secondary .widget,
+#secondary .widget * {
+    overflow: visible !important;
+    max-width: none !important;
+    white-space: normal !important;
+    text-overflow: unset !important;
 }
 
-#secondary .widget * {
-    overflow: visible;
-    max-width: 100%;
-    white-space: normal;
+#secondary .widget {
+    padding: 24px;
 }
 
 #secondary .widget img,
@@ -697,6 +694,11 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
 
 #secondary .widget > *:last-child {
     margin-bottom: 0;
+}
+
+/* Hide Search widget */
+.widget_search {
+    display: none !important;
 }
 
 /* Hide Search widget */
