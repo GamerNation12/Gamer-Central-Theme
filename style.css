@@ -645,6 +645,7 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
 
 /* Sidebar widgets - never clip content */
 #secondary,
+#secondary *,
 #secondary .widget,
 #secondary .widget * {
     overflow: visible !important;
@@ -657,15 +658,39 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
     padding: 24px;
 }
 
+#secondary .widget-text,
+#secondary .widget_custom_html,
+#secondary .widget_block {
+    overflow: visible !important;
+    max-width: none !important;
+}
+
+#secondary .widget-text *,
+#secondary .widget_custom_html *,
+#secondary .widget_block * {
+    overflow: visible !important;
+    max-width: none !important;
+    white-space: normal !important;
+}
+
 #secondary .widget img,
 #secondary .widget iframe,
 #secondary .widget embed,
-#secondary .widget object {
+#secondary .widget object,
+#secondary .widget a img,
+#secondary .widget a iframe {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto 12px;
     border-radius: var(--gamer-radius);
+}
+
+#secondary .widget a img,
+#secondary .widget a > * {
+    display: inline-block !important;
+    max-width: none !important;
+    overflow: visible !important;
 }
 
 #secondary .widget .widget-title {
