@@ -678,19 +678,31 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
 #secondary .widget embed,
 #secondary .widget object,
 #secondary .widget a img,
-#secondary .widget a iframe {
+#secondary .widget a iframe,
+#secondary .widget a {
     max-width: 100%;
     height: auto;
-    display: block;
-    margin: 0 auto 12px;
-    border-radius: var(--gamer-radius);
-}
-
-#secondary .widget a img,
-#secondary .widget a > * {
     display: inline-block !important;
     max-width: none !important;
     overflow: visible !important;
+    white-space: normal !important;
+    text-overflow: unset !important;
+}
+
+#secondary .widget a > *,
+#secondary .widget a span,
+#secondary .widget a div {
+    display: inline-block !important;
+    max-width: none !important;
+    overflow: visible !important;
+    white-space: normal !important;
+}
+
+#secondary .widget a img,
+#secondary .widget a iframe {
+    display: block !important;
+    margin: 0 auto 12px !important;
+    border-radius: var(--gamer-radius);
 }
 
 #secondary .widget .widget-title {
