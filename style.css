@@ -710,7 +710,12 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
 }
 
 #secondary .widget:has(.g-ytsubscribe) {
-    padding: 16px;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 12px;
+    margin-bottom: 0;
 }
 
 #secondary .widget img,
