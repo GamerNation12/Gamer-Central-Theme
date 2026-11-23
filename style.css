@@ -79,12 +79,14 @@ body.light .site-header, html.light .site-header {
     letter-spacing: -0.02em;
     background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 body.light .site-title a {
     background: none;
     -webkit-background-clip: initial;
+    background-clip: initial;
     -webkit-text-fill-color: initial;
     color: #0f172a !important;
 }
@@ -406,6 +408,7 @@ video {
     letter-spacing: -0.02em;
     background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -432,6 +435,7 @@ body.light .home-title,
 html.light .home-title {
     background: none !important;
     -webkit-background-clip: initial !important;
+    background-clip: initial !important;
     -webkit-text-fill-color: initial !important;
     color: #0f172a !important;
 }
