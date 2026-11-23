@@ -700,23 +700,18 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
     display: block !important;
     margin: 0 auto !important;
 }
-#secondary .g-ytsubscribe p,
-#secondary .widget p {
-    margin: 6px 0 0 !important;
-    font-size: 13px !important;
+#secondary .g-ytsubscribe,
+#secondary .widget .g-ytsubscribe {
+    overflow: visible !important;
+    max-width: none !important;
     text-align: center !important;
-    overflow: visible !important;
-    max-width: none !important;
-    white-space: normal !important;
 }
-#secondary .g-ytsubscribe p a,
-#secondary .widget p a {
-    color: #60a5fa !important;
-    text-decoration: none !important;
-    word-break: break-word !important;
+#secondary .g-ytsubscribe a,
+#secondary .widget .g-ytsubscribe a {
+    display: inline-block !important;
     overflow: visible !important;
     max-width: none !important;
-    white-space: normal !important;
+    text-decoration: none !important;
 }
 
 #secondary .widget img,
