@@ -145,7 +145,7 @@ body.light .main-navigation a:hover {
 
 .widget-area {
     float: right;
-    width: 28%;
+    width: 34%;
 }
 
 @media (max-width: 768px) {
@@ -355,7 +355,7 @@ video {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
-    overflow: hidden;
+    overflow: visible;
     border-radius: var(--gamer-radius);
     border: 1px solid var(--gamer-border);
     margin-bottom: 28px;
@@ -643,7 +643,7 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
     background: var(--gamer-primary);
 }
 
-/* Sidebar widgets - ensure content is never clipped */
+/* Sidebar widgets - never clip content */
 #secondary,
 #secondary .widget,
 #secondary .widget * {
@@ -694,11 +694,6 @@ body .wpforms-form .wpforms-field-name .wpforms-field-block input {
 
 #secondary .widget > *:last-child {
     margin-bottom: 0;
-}
-
-/* Hide Search widget */
-.widget_search {
-    display: none !important;
 }
 
 /* Hide Search widget */
